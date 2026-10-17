@@ -163,6 +163,10 @@ void SystemClock_Config(void) {
 static void createNode() {
     for (uint32_t i = 0; i < 8; ++i) {
         led_list[i] = (LED_Node *) malloc(sizeof(LED_Node));
+        if (led_list[i] == NULL) {
+            Error_Handler();
+            return;
+        }
     }
     led_list[0]->GPIO_node = LED0_GPIO_Port;
     led_list[0]->Pin_node = LED0_Pin;
