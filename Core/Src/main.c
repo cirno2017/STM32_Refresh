@@ -171,7 +171,7 @@ static void createNode() {
     led_list[0]->GPIO_node = LED0_GPIO_Port;
     led_list[0]->Pin_node = LED0_Pin;
     led_list[0]->next = led_list[1];
-
+    //
     led_list[1]->GPIO_node = LED1_GPIO_Port;
     led_list[1]->Pin_node = LED1_Pin;
     led_list[1]->next = led_list[2];
